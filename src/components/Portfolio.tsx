@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import deloft from '../assets/deloft.png'
 import vayuratha from '../assets/reel_snap.png'
+import vayuratha_socail from "../assets/vayu.png"
+import gill_socail from "../assets/gill.png"
+import narah_social from "../assets/narah.png"
 
 type PortfolioItem = {
     category: string;
@@ -28,8 +31,6 @@ export function Portfolio() {
             year: '2024',
             metrics: '200% increase in sales'
         },
-
-
         {
             category: 'Video',
             title: 'Viral Education Campaign',
@@ -40,8 +41,6 @@ export function Portfolio() {
             metrics: '100k+ views',
             link:"https://www.instagram.com/vayuratha_pvt.ltd/"
         },
-
-
         {
             category: 'Ads',
             title: 'Google Ads Campaign',
@@ -50,7 +49,34 @@ export function Portfolio() {
             client: 'Local Service Provider',
             year: '2024',
             metrics: '150% ROAS'
-        }
+        },
+        {
+            category: 'Social',
+            title: 'Social media management and growth for vayuratha ',
+            description: '',
+            image:vayuratha_socail,
+            client: 'Vayuratha Private Limited',
+            year: '2024',
+            metrics: '150% ROAS'
+        },
+        {
+            category: 'Social',
+            title: 'Social Media Handling for the Galaxy International Institute of Logistics',
+            description: '',
+            image: gill_socail,
+            client: 'Galaxy International Institute of Logistics',
+            year: '2024',
+            metrics: '150% ROAS'
+        },
+        {
+            category: 'Social',
+            title: 'Google Ads Campaign and Socail media handling for Narah',
+            description: '',
+            image: narah_social,
+            client: 'Narah interior Designers',
+            year: '2024',
+            metrics: '150% ROAS'
+        },
     ];
 
     const filters = [
@@ -146,7 +172,7 @@ export function Portfolio() {
                                             <img
                                                 src={item.image}
                                                 alt={item.title}
-                                                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 bg-cover"
+                                                className="w-full h-full object-contain transition-all duration-700 group-hover:scale-110 "
                                                 loading="lazy"
                                                 onError={() => handleImageError(index)}
                                             />

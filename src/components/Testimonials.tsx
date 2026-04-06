@@ -10,10 +10,11 @@ type Testimonial = {
     name: string;
     designation: string;
     company: string;
-    image?: string; 
+    image?: string;
 };
 export function Testimonials() {
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  
 
     const testimonials: Testimonial[] = [
         {
@@ -41,7 +42,8 @@ export function Testimonials() {
         logo,
         gillLogo,
         deloft_logo,
-        narah
+        narah,
+     
     ];
 
     return (
