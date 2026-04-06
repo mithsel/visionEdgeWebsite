@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
 import { useTheme } from "../hooks/ThemeProvider";
 import Logo from '../assets/svg/Logo_one'
-import { useNavigate } from "react-router-dom";
+
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const { theme, toggleTheme } = useTheme();
-    const navigate = useNavigate()
 
     useEffect(() => {
         const handleScroll = () => {
