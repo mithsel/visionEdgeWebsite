@@ -24,7 +24,7 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* logo */}
-                <div className="flex items-center cursor-pointer" onClick={()=>navigate('/') }>
+                <div className="flex items-center cursor-pointer" onClick={()=>window.scrollTo({ top: 0, behavior: "smooth" }) }>
                     <Logo />
                 </div>
 

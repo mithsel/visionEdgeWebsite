@@ -8,6 +8,7 @@ import event_craft from "../assets/event_craft.jpg";
 import drone_show from '../assets/sky_show.webp'
 import edit_pro from '../assets/edit_pro.jpg';
 import whatsapp_add from '../assets/whatsappp_business.jpg'
+import live_stream from '../assets/live_stream.jpeg'
 
 export function Services() {
     const [_hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -16,15 +17,16 @@ export function Services() {
         {
             image: lauchpad,
             title: 'LaunchPad 360',
-            tagline: 'Complete Business Launch Solution',
-            description: 'Complete startup essentials to launch your business professionally.',
+            tagline: 'Complete Business Startup Package',
+            description: 'Kickstart your business with a professional online presence and essential branding tools.',
             points: [
-                'Website / Ecommerce',
-                'Branding Kit',
-                'Invoice & Quotation System'
+                'Landing Page Website with Contact Form',
+                "Startup website development",
+                'Business launch services India',
+
             ],
-            includes: ['5 Pages Website', 'Logo Design', 'Business Email', 'Hosting Setup'],
-            metric: '₹19,999+',
+            includes: ['Hosting Setup (as per requirement)', 'Flyers & Brochure Design', 'Website Management Support',],
+            metric: '₹55,000',
             metricLabel: 'One-time',
 
             popular: false,
@@ -33,32 +35,31 @@ export function Services() {
         {
             image: google_meta_ads,
             title: 'AdMax Pro',
-            tagline: 'Performance Marketing Powerhouse',
-            description: 'Performance marketing focused on ROI and conversions.',
+            tagline: 'Performance Marketing Services',
+            description: 'Drive high-quality leads and maximize ROI with data-driven advertising strategies.',
             points: [
-                'Google + Meta Ads',
+                'Google Ads & Meta Ads Management',
                 'Campaign Optimization',
                 'Weekly Reports'
             ],
-            includes: ['Ad Creation', 'A/B Testing', 'Audience Targeting', 'Monthly Review'],
-            metric: '₹7,999/mo',
+            includes: ['Ad Creative Design', 'A/B Testing', 'Advanced Audience Targeting', 'Monthly Performance Review'],
+            metric: '₹12,000/mo',
             metricLabel: 'Ads Mgmt',
-
             popular: true,
             ctaText: 'Start Advertising'
         },
         {
             image: social_media,
             title: 'SocialPulse',
-            tagline: 'Social Media Domination',
-            description: 'End-to-end social media management and growth.',
+            tagline: 'Social Media Management',
+            description: 'Build your brand presence and engage your audience effectively across platforms.',
             points: [
-                'Content Creation',
-                'Posting & Reels',
-                'Engagement'
+                'Page & Community Management',
+                'Regular Posts & Reels',
+                'Page & Community Management'
             ],
-            includes: ['15 Posts/Month', '5 Reels', 'Community Mgmt', 'Monthly Analytics'],
-            metric: '₹6,999/mo',
+            includes: ['15 Posts/Month', '5 Reels', 'Audience Engagement', 'Monthly Analytics'],
+            metric: '₹6,000/mo',
             metricLabel: 'Social Growth',
 
             popular: false,
@@ -68,14 +69,14 @@ export function Services() {
             image: video_post_production,
             title: 'YouTube Growth Engine',
             tagline: 'From Zero to Viral',
-            description: 'Grow your YouTube channel with strategy and optimization.',
+            description: 'Grow your YouTube channel with strategic content planning and optimization.',
             points: [
-                'SEO + Thumbnails',
-                'Content Strategy',
-                'Analytics'
+                'Channel Audit',
+                'Keyword Research',
+                'Competitor Analysis'
             ],
-            includes: ['Channel Audit', 'Keyword Research', 'Thumbnail Design', 'Competitor Analysis'],
-            metric: '₹8,999/mo',
+            includes: ['Thumbnail Design', 'Competitor Analysis'],
+            metric: '₹6,000/mo',
             metricLabel: 'YouTube',
 
             popular: false,
@@ -84,34 +85,32 @@ export function Services() {
         {
             image: whatsapp_add,
             title: 'WhatsApp Business Suite',
-            tagline: 'Automated Customer Communication',
+            tagline: 'Automate customer communication and improve lead conversion with WhatsApp API.',
             description: 'Automate and scale your customer communication.',
             points: [
-                'API Setup',
-                'Automation Flows',
-                'Broadcast Campaigns'
+                'Automation Workflows',
+                'Broadcast Campaigns',
             ],
             includes: ['API Integration', 'Chatbot Setup', 'Template Creation', 'Analytics Dashboard'],
-            metric: '₹4,999+',
-            metricLabel: 'Setup',
+            metric: '₹2,500',
+            metricLabel: 'One-Time Setup',
 
             popular: false,
             ctaText: 'Get WhatsApp API'
         },
         {
             image: event_craft,
-            title: 'EventCraft',
-            tagline: 'Memorable Event Experiences',
-            description: 'Professional event planning and execution.',
+            title: 'EventCraft ',
+            tagline: 'Event Management Services',
+            description: 'Plan and execute professional events with seamless coordination.',
             points: [
                 'Corporate Events',
                 'Brand Launches',
-                'On-ground Execution'
+                'End-to-End Management'
             ],
-            includes: ['Event Planning', 'Vendor Management', 'On-site Coordination', 'Post-Event Report'],
-            metric: '₹15K+',
-            metricLabel: 'Per Project',
-
+            includes: ['Event Planning', 'Vendor Management', 'On-site Execution', ''],
+            metric: '₹10,000',
+            metricLabel: 'Starting',
             popular: false,
             ctaText: 'Plan Your Event'
         },
@@ -165,7 +164,24 @@ export function Services() {
 
             popular: false,
             ctaText: 'Edit Your Video'
-        }
+        },
+        {
+            image: live_stream,
+            title: 'Live Streaming',
+            tagline: 'Live Streaming Services',
+            description: 'High-quality live streaming setup for events, conferences, and launches.',
+            points: [
+                'Complete Setup & Configuration',
+                'Multi-platform Streaming Support',
+                'live streaming services India'
+            ],
+            includes: ['live streaming services India', 'event live streaming setup'],
+            metric: '₹1,500+',
+            metricLabel: 'Per Video',
+
+            popular: false,
+            ctaText: 'Edit Your Video'
+        },
     ];
 
     return (
