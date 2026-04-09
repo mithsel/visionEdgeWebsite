@@ -187,7 +187,7 @@ export function Services() {
     return (
         <section id="services" className="py-24 px-6 bg-white dark:bg-[#0A0A0F] relative overflow-hidden">
             {/* Animated background decoration */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#2664eb]/5 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-br from-[#2664eb]/5 via-transparent to-transparent pointer-events-none" />
             <div className="absolute top-0 right-0 w-96 h-96 bg-[#2664eb]/5 rounded-full blur-3xl animate-pulse" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#5B8DEF]/5 rounded-full blur-3xl animate-pulse delay-1000" />
 
