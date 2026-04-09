@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 export function Pricing() {
     const [isYearly, setIsYearly] = useState(false);
+    const YEARLY_DISCOUNT = 0.2;
 
     const plans = [
         {
             name: 'Starter',
-            monthlyPrice: 8000,
-            yearlyPrice: 76800,
+            monthlyPrice: 15000,
             features: [
                 '8 social media posts/month',
                 '1 landing page design',
@@ -19,8 +19,7 @@ export function Pricing() {
         },
         {
             name: 'Growth',
-            monthlyPrice: 25000,
-            yearlyPrice: 240000,
+            monthlyPrice: 30000,
             features: [
                 '20 social media posts/month',
                 '3 page website + blog',
@@ -34,7 +33,6 @@ export function Pricing() {
         {
             name: 'Scale',
             monthlyPrice: 60000,
-            yearlyPrice: 576000,
             features: [
                 'Unlimited social content',
                 'Full website + e-commerce',
@@ -56,6 +54,8 @@ export function Pricing() {
             maximumFractionDigits: 0
         }).format(price);
     };
+
+    const getYearlyPrice = (monthlyPrice: number) => monthlyPrice * 12 * (1 - YEARLY_DISCOUNT);
 
     return (
         <section id="pricing" className="py-24 px-6 bg-[#F4F4F8] dark:bg-[#0A0A0F]">
@@ -123,7 +123,7 @@ export function Pricing() {
                                         className="text-4xl text-[#1A1A2E] dark:text-white"
                                         style={{ fontFamily: 'var(--font-heading)' }}
                                     >
-                                        {plan.custom ? '' : formatPrice(isYearly ? plan.yearlyPrice / 12 : plan.monthlyPrice)}
+                                        {plan.custom ? '' : formatPrice(isYearly ? getYearlyPrice(plan.monthlyPrice) / 12 : plan.monthlyPrice)}
                                     </span>
                                     {!plan.custom && (
                                         <span className="text-sm text-[#5A5A7A] dark:text-[#8888A8]">/month</span>
@@ -136,7 +136,7 @@ export function Pricing() {
                                 </div>
                                 {isYearly && !plan.custom && (
                                     <div className="text-xs text-[#5A5A7A] dark:text-[#8888A8] mt-1">
-                                        Billed {formatPrice(plan.yearlyPrice)} yearly
+                                        Billed {formatPrice(getYearlyPrice(plan.monthlyPrice))} yearly
                                     </div>
                                 )}
                             </div>

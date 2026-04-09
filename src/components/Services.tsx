@@ -26,9 +26,6 @@ export function Services() {
 
             ],
             includes: ['Hosting Setup (as per requirement)', 'Flyers & Brochure Design', 'Website Management Support',],
-            metric: '₹55,000',
-            metricLabel: 'One-time',
-
             popular: false,
             ctaText: 'Launch Your Business'
         },
@@ -43,8 +40,6 @@ export function Services() {
                 'Weekly Reports'
             ],
             includes: ['Ad Creative Design', 'A/B Testing', 'Advanced Audience Targeting', 'Monthly Performance Review'],
-            metric: '₹12,000/mo',
-            metricLabel: 'Ads Mgmt',
             popular: true,
             ctaText: 'Start Advertising'
         },
@@ -59,9 +54,6 @@ export function Services() {
                 'Page & Community Management'
             ],
             includes: ['15 Posts/Month', '5 Reels', 'Audience Engagement', 'Monthly Analytics'],
-            metric: '₹6,000/mo',
-            metricLabel: 'Social Growth',
-
             popular: false,
             ctaText: 'Grow Your Brand'
         },
@@ -76,9 +68,6 @@ export function Services() {
                 'Competitor Analysis'
             ],
             includes: ['Thumbnail Design', 'Competitor Analysis'],
-            metric: '₹6,000/mo',
-            metricLabel: 'YouTube',
-
             popular: false,
             ctaText: 'Boost Your Channel'
         },
@@ -92,9 +81,6 @@ export function Services() {
                 'Broadcast Campaigns',
             ],
             includes: ['API Integration', 'Chatbot Setup', 'Template Creation', 'Analytics Dashboard'],
-            metric: '₹2,500',
-            metricLabel: 'One-Time Setup',
-
             popular: false,
             ctaText: 'Get WhatsApp API'
         },
@@ -109,8 +95,6 @@ export function Services() {
                 'End-to-End Management'
             ],
             includes: ['Event Planning', 'Vendor Management', 'On-site Execution', ''],
-            metric: '₹10,000',
-            metricLabel: 'Starting',
             popular: false,
             ctaText: 'Plan Your Event'
         },
@@ -125,9 +109,6 @@ export function Services() {
                 'Software Install'
             ],
             includes: ['Hardware Setup', 'Network Configuration', 'Software Installation', 'Support'],
-            metric: '₹5K+',
-            metricLabel: 'Setup',
-
             popular: false,
             ctaText: 'Get IT Support'
         },
@@ -142,9 +123,6 @@ export function Services() {
                 'Brand Promotions'
             ],
             includes: ['Choreographed Show', 'Custom Animations', 'Event Coverage', 'Safety Compliance'],
-            metric: '₹1.5L+',
-            metricLabel: 'Per Event',
-
             popular: false,
             ctaText: 'Book Drone Show'
         },
@@ -159,9 +137,6 @@ export function Services() {
                 'Motion Graphics'
             ],
             includes: ['4K Editing', 'Color Correction', 'Sound Design', 'Rapid Delivery'],
-            metric: '₹1,500+',
-            metricLabel: 'Per Video',
-
             popular: false,
             ctaText: 'Edit Your Video'
         },
@@ -176,9 +151,6 @@ export function Services() {
                 'live streaming services India'
             ],
             includes: ['live streaming services India', 'event live streaming setup'],
-            metric: '₹1,500+',
-            metricLabel: 'Per Video',
-
             popular: false,
             ctaText: 'Edit Your Video'
         },
@@ -255,12 +227,6 @@ export function Services() {
                                         <div className="bg-black/60 backdrop-blur-md rounded-lg px-3 py-1.5 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                                             <p className="text-white/90 text-xs">{service.tagline}</p>
                                         </div>
-                                    </div>
-
-                                    {/* Metric badge */}
-                                    <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md rounded-lg px-3 py-1.5 transform -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
-                                        <div className="text-white font-bold text-lg">{service.metric}</div>
-                                        <div className="text-white/80 text-xs">{service.metricLabel}</div>
                                     </div>
                                 </div>
 
