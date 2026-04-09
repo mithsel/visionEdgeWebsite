@@ -31,7 +31,7 @@ export function Testimonials() {
             company: "Daloft Aerospace"
         },
         {
-            quote: "Our Meta ads were bleeding money until VisionEdge took over. They cut our CPA by 60% and scaled us to ₹2L monthly revenue. Game changers.",
+            quote: "Our Meta ads were bleeding money until VisionEdge took over. They cut our CPA by 60% and scaled us to ₹25L monthly revenue. Game changers.",
             name: "Sneha",
             designation: "CEO",
             company: "Narah"

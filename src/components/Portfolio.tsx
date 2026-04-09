@@ -27,7 +27,7 @@ export function Portfolio() {
             description: 'A specialized corporate solution focused on lead conversion and professional brand positioning.',
             image: deloft,
             link: 'https://daloftaerospace.in/',
-            client: 'Drone Manufacturer',
+            client: 'Daloft Aerospace',
             year: '2024',
             metrics: '200% increase in sales'
         },
