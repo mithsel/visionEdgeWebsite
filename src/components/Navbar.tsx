@@ -7,7 +7,6 @@ export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const { theme, toggleTheme } = useTheme();
 
-    const [openService, setOpenService] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,8 +30,7 @@ export default function Navbar() {
 
                 <div className="hidden md:flex items-center gap-8">
                     <div className="relative"
-                        onMouseEnter={() => { setOpenService(true) }}
-                        onMouseLeave={() => setOpenService(false)}>
+                       >
                         <a
                             href="#services"
 
