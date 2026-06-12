@@ -7,6 +7,8 @@ export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const { theme, toggleTheme } = useTheme();
 
+    const [openService, setOpenService] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20)
@@ -23,14 +25,22 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* logo */}
-                <div className="flex items-center cursor-pointer" onClick={()=>window.scrollTo({ top: 0, behavior: "smooth" }) }>
+                <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                     <Logo />
                 </div>
 
                 <div className="hidden md:flex items-center gap-8">
-                    <a href="#services" className="text-[#5A5A7A] dark:text-[#8888A8] hover:text-[#2664eb] dark:hover:text-[#2664eb] transition-colors duration-300">
-                        Services
-                    </a>
+                    <div className="relative"
+                        onMouseEnter={() => { setOpenService(true) }}
+                        onMouseLeave={() => setOpenService(false)}>
+                        <a
+                            href="#services"
+
+                            className="text-[#5A5A7A] dark:text-[#8888A8] hover:text-[#2664eb] dark:hover:text-[#2664eb] transition-colors duration-300">
+                            Services
+                        </a>
+                        
+                    </div>
                     <a href="#portfolio" className="text-[#5A5A7A] dark:text-[#8888A8] hover:text-[#2664eb] dark:hover:text-[#2664eb] transition-colors duration-300">
                         Portfolio
                     </a>
