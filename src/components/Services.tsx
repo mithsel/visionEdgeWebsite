@@ -1,160 +1,13 @@
 import { useState } from 'react';
-import social_media from '../assets/social media.jpg';
-import web_design from '../assets/website.png';
-import video_post_production from '../assets/video-post-production.webp';
-import google_meta_ads from '../assets/google_meta_ads.png'
-import lauchpad from "../assets/launch_pad.jpg"
-import event_craft from "../assets/event_craft.jpg";
-import drone_show from '../assets/sky_show.webp'
-import edit_pro from '../assets/edit_pro.jpg';
-import whatsapp_add from '../assets/whatsappp_business.jpg'
-import live_stream from '../assets/live_stream.jpeg'
+import type { ServicesInterface } from '../interfaces/servicesMenuInterface';
+import { servicesData } from '../utils/servicesData';
+import { useNavigate } from 'react-router-dom';
 
 export function Services() {
     const [_hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [getData, _setData] = useState<ServicesInterface[]>(servicesData);
+    const navigate = useNavigate();
 
-    const services = [
-        {
-            image: lauchpad,
-            title: 'LaunchPad 360',
-            tagline: 'Complete Business Startup Package',
-            description: 'Kickstart your business with a professional online presence and essential branding tools.',
-            points: [
-                'Landing Page Website with Contact Form',
-                "Startup website development",
-                'Business launch services India',
-
-            ],
-            includes: ['Hosting Setup (as per requirement)', 'Flyers & Brochure Design', 'Website Management Support',],
-            popular: false,
-            ctaText: 'Launch Your Business'
-        },
-        {
-            image: google_meta_ads,
-            title: 'AdMax Pro',
-            tagline: 'Performance Marketing Services',
-            description: 'Drive high-quality leads and maximize ROI with data-driven advertising strategies.',
-            points: [
-                'Google Ads & Meta Ads Management',
-                'Campaign Optimization',
-                'Weekly Reports'
-            ],
-            includes: ['Ad Creative Design', 'A/B Testing', 'Advanced Audience Targeting', 'Monthly Performance Review'],
-            popular: true,
-            ctaText: 'Start Advertising'
-        },
-        {
-            image: social_media,
-            title: 'SocialPulse',
-            tagline: 'Social Media Management',
-            description: 'Build your brand presence and engage your audience effectively across platforms.',
-            points: [
-                'Page & Community Management',
-                'Regular Posts & Reels',
-                'Page & Community Management'
-            ],
-            includes: ['15 Posts/Month', '5 Reels', 'Audience Engagement', 'Monthly Analytics'],
-            popular: false,
-            ctaText: 'Grow Your Brand'
-        },
-        {
-            image: video_post_production,
-            title: 'YouTube Growth Engine',
-            tagline: 'From Zero to Viral',
-            description: 'Grow your YouTube channel with strategic content planning and optimization.',
-            points: [
-                'Channel Audit',
-                'Keyword Research',
-                'Competitor Analysis'
-            ],
-            includes: ['Thumbnail Design', 'Competitor Analysis'],
-            popular: false,
-            ctaText: 'Boost Your Channel'
-        },
-        {
-            image: whatsapp_add,
-            title: 'WhatsApp Business Suite',
-            tagline: 'Automate customer communication and improve lead conversion with WhatsApp API.',
-            description: 'Automate and scale your customer communication.',
-            points: [
-                'Automation Workflows',
-                'Broadcast Campaigns',
-            ],
-            includes: ['API Integration', 'Chatbot Setup', 'Template Creation', 'Analytics Dashboard'],
-            popular: false,
-            ctaText: 'Get WhatsApp API'
-        },
-        {
-            image: event_craft,
-            title: 'EventCraft ',
-            tagline: 'Event Management Services',
-            description: 'Plan and execute professional events with seamless coordination.',
-            points: [
-                'Corporate Events',
-                'Brand Launches',
-                'End-to-End Management'
-            ],
-            includes: ['Event Planning', 'Vendor Management', 'On-site Execution', ''],
-            popular: false,
-            ctaText: 'Plan Your Event'
-        },
-        {
-            image: web_design,
-            title: 'TechEase',
-            tagline: 'Hassle-Free IT Infrastructure',
-            description: 'Complete IT and office infrastructure setup.',
-            points: [
-                'System Setup',
-                'Networking',
-                'Software Install'
-            ],
-            includes: ['Hardware Setup', 'Network Configuration', 'Software Installation', 'Support'],
-            popular: false,
-            ctaText: 'Get IT Support'
-        },
-        {
-            image: drone_show,
-            title: 'SkyShow',
-            tagline: 'Aerial Light Show Spectacular',
-            description: 'Drone-based aerial light show experiences.',
-            points: [
-                'Drone Shows',
-                'Event Visuals',
-                'Brand Promotions'
-            ],
-            includes: ['Choreographed Show', 'Custom Animations', 'Event Coverage', 'Safety Compliance'],
-            popular: false,
-            ctaText: 'Book Drone Show'
-        },
-        {
-            image: edit_pro,
-            title: 'EditPro Studio',
-            tagline: 'Professional Video Excellence',
-            description: 'Professional video editing and post-production.',
-            points: [
-                'Editing',
-                'Color Grading',
-                'Motion Graphics'
-            ],
-            includes: ['4K Editing', 'Color Correction', 'Sound Design', 'Rapid Delivery'],
-            popular: false,
-            ctaText: 'Edit Your Video'
-        },
-        {
-            image: live_stream,
-            title: 'Live Streaming',
-            tagline: 'Live Streaming Services',
-            description: 'High-quality live streaming setup for events, conferences, and launches.',
-            points: [
-                'Complete Setup & Configuration',
-                'Multi-platform Streaming Support',
-                'live streaming services India'
-            ],
-            includes: ['live streaming services India', 'event live streaming setup'],
-            popular: false,
-            ctaText: 'Edit Your Video'
-        },
-    ];
 
     return (
         <section id="services" className="py-24 px-6 bg-white dark:bg-[#0A0A0F] relative overflow-hidden">
@@ -186,7 +39,7 @@ export function Services() {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
+                    {getData.map((service, index) => (
                         <div
                             key={index}
                             className="group relative"
@@ -196,7 +49,6 @@ export function Services() {
                                 animation: `fadeInUp 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1) ${index * 0.1}s backwards`
                             }}
                         >
-                            {/* Popular Badge */}
                             {service.popular && (
                                 <div className="absolute -top-3 left-6 z-20">
                                     <div className="px-3 py-1 bg-gradient-to-r from-[#2664eb] to-[#5B8DEF] text-white text-xs font-bold rounded-full shadow-lg">
@@ -205,13 +57,10 @@ export function Services() {
                                 </div>
                             )}
 
-                            {/* Card glow effect */}
                             <div className={`absolute -inset-0.5  rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-xl group-hover:blur-2xl`} />
-
-                            {/* Card content */}
-                            <div className="relative bg-[#F4F4F8] dark:bg-[#111118] border border-[#E8E8F0] dark:border-[#1C1C28] rounded-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl overflow-hidden">
-
-                                {/* Image Container */}
+                            <div
+                                onClick={() => navigate(`/services/${service.slug}`, { state: { slug: service.slug } })}
+                                className="relative bg-[#F4F4F8] h-150 cursor-pointer dark:bg-[#111118] border border-[#E8E8F0] dark:border-[#1C1C28] rounded-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl overflow-hidden">
                                 <div className="relative h-52 overflow-hidden">
                                     <img
                                         src={service.image}
@@ -222,7 +71,6 @@ export function Services() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#111118] via-transparent to-transparent opacity-70" />
                                     <div className="absolute inset-0 bg-[#2664eb]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                    {/* Tagline Overlay */}
                                     <div className="absolute bottom-4 left-4 right-4">
                                         <div className="bg-black/60 backdrop-blur-md rounded-lg px-3 py-1.5 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                                             <p className="text-white/90 text-xs">{service.tagline}</p>
@@ -230,9 +78,7 @@ export function Services() {
                                     </div>
                                 </div>
 
-                                {/* Content Container */}
                                 <div className="p-6">
-                                    {/* Title */}
                                     <div className="flex items-center justify-between mb-3">
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 rounded-xl bg-[#2664eb]/10 flex items-center justify-center group-hover:bg-[#2664eb]/20 transition-all duration-300">
@@ -249,9 +95,8 @@ export function Services() {
                                         </div>
                                     </div>
 
-                                    {/* Description */}
                                     <p className="text-sm text-[#6C6C8A] dark:text-[#7A7A9A] mb-4 leading-relaxed">
-                                        {service.description}
+                                        {service.description.slice(0, 100)}
                                     </p>
 
                                     {/* Divider */}
@@ -270,7 +115,7 @@ export function Services() {
                                                     key={idx}
                                                     className="text-xs px-2 py-1 bg-[#2664eb]/5 dark:bg-[#2664eb]/10 rounded-md text-[#5A5A7A] dark:text-[#8888A8]"
                                                 >
-                                                    {item}
+                                                    {item?.label}
                                                 </span>
                                             ))}
                                         </div>

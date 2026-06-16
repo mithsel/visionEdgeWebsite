@@ -31,3 +31,19 @@
     @apply bg-[var(--background)] text-[var(--foreground)];
   }
 }
+
+.bg-dots {
+  background-image:
+    radial-gradient(rgba(255,255,255,.4) 1px, transparent 1px);
+  background-size: 14px 14px;
+  mask-image: radial-gradient(
+    circle at top left,
+    black 20%,
+    transparent 80%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at top left,
+    black 20%,
+    transparent 80%
+  );
+}
