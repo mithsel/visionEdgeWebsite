@@ -11,8 +11,6 @@ import brand_integrity from "../assets/banner-integrity.png"
 
 import live_stream from '../assets/live_stream.jpeg'
 import type { ServicesInterface } from "../interfaces/servicesMenuInterface";
-import { Route } from "react-router-dom";
-
 
 export const servicesData:ServicesInterface[] = [
 {

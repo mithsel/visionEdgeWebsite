@@ -109,10 +109,7 @@ export default function ServiceViewPage() {
                                 <div
                                     key={index}
                                     className={`flex flex-col items-center justify-center py-6 px-4 text-center transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-800
-                                         ${index !== item?.stats?.length - 1
-                                            ? "border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-gray-700"
-                                            : ""
-                                        }`}
+                                         `}
                                 >
                                     <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
                                         {stats?.value}
