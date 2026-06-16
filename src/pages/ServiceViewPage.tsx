@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { servicesData } from "../utils/servicesData";
 import { useState } from "react";
 import type { ServicesInterface } from "../interfaces/servicesMenuInterface";
@@ -10,7 +10,7 @@ export default function ServiceViewPage() {
     const { slug } = useParams();
     const [getData, _setData] = useState<ServicesInterface[]>(servicesData)
     const filterData = getData.filter((item) => item.slug === slug)
-    
+
     return (
         <section className="pt-20 min-h-screen">
             {

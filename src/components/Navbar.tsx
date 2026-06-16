@@ -100,12 +100,15 @@ export default function Navbar() {
                         }
 
                     </div>
-                    <a href="#portfolio" className="text-[#5A5A7A] dark:text-[#8888A8] hover:text-[#2664eb] dark:hover:text-[#2664eb] transition-colors duration-300">
+                    <button
+                        onClick={() => navigate("/#portfolio")}
+                        className="text-[#5A5A7A] dark:text-[#8888A8]"
+                    >
                         Portfolio
-                    </a>
-                    <a href="#pricing" className="text-[#5A5A7A] dark:text-[#8888A8] hover:text-[#2664eb] dark:hover:text-[#2664eb] transition-colors duration-300">
+                    </button>
+                    <button onClick={() => navigate("/#pricing")} className="text-[#5A5A7A] dark:text-[#8888A8] hover:text-[#2664eb] dark:hover:text-[#2664eb] transition-colors duration-300">
                         Pricing
-                    </a>
+                    </button>
                 </div>
 
                 <div className="flex items-center gap-4">
