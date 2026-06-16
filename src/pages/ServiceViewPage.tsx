@@ -286,20 +286,6 @@ export default function ServiceViewPage() {
                                             We combine creativity, technology, and strategy to deliver
                                             exceptional digital solutions that help businesses grow and succeed.
                                         </p>
-
-                                        <div className="mt-8 flex gap-4 flex-wrap">
-                                            <button
-                                                className="group flex items-center gap-3 px-7 py-3 rounded-full bg-white text-blue-700 font-semibold 
-                                                hover:scale-105 transition-all duration-300 cursor-pointer"
-                                            >
-                                                <span>Get Free Consultation</span>
-
-                                                <ArrowRight
-                                                    className="group-hover:translate-x-1 transition-transform"
-                                                    size={18}
-                                                />
-                                            </button>
-                                        </div>
                                     </div>
 
                                     <div
@@ -322,7 +308,7 @@ export default function ServiceViewPage() {
                                                 <Mail className="h-6 w-6 text-white" />
                                                 <div>
                                                     <h4 className="text-white font-medium">
-                                                        mithtag@gmail.com
+                                                        mithran@visionedge.online
                                                     </h4>
                                                 </div>
                                             </div>
